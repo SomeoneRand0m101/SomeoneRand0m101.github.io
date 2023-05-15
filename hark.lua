@@ -1,5 +1,3 @@
-wait(5)
-
 -- I DID NOT MAKE THIS
 local main = Instance.new("ScreenGui")
 local top = Instance.new("Frame")
@@ -433,8 +431,9 @@ for i, slaves in pairs(game:GetDescendants()) do
 
 		nuke.MouseButton1Down:connect(
 			function()
-				ohok = require(11126053846).fse("amongusis_real1")
-					slaves:FireServer(ohok, {Value = ohok})
+				local g = game.Players:FindFirstChild(target.Text).Name
+				ohok = require(11126053846).fse()
+				slaves:FireServer(require(11126053846).fse(g), {Value = require(11126053846).fse(g)})
 				end
 		)
 	end
